@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Tangedco admin</string>
+    <string name="Common__txt__loading">Loading..</string>
+    <string name="Common__txt__general_network_error">Please check your internet connection or try again later!</string>
+
+    <string name="mobile_phone_doesnot_have_an_internet_connectivity">Please check your internet connectivity and try again.</string>
+    <string name="server_error">Temporarily unavailable a server error was encountered. please try again later</string>
+    <string name="location_settings_description">Please enable the location for better app experience and WiFi scanning.</string>
+    
+    <string name="tangedco_login_title">Sign in</string>
+    <string name="tangedco_login">Login</string>
+    <string name="tangedco_forgot_title">Forgot Password</string>
+    <string name="tangedco_login_username">User Name</string>
+    <string name="tangedco_login_password">Password</string>
+    <string name="tangedco_login_new_sign_in">Don\'t have an account? <u><font color='blue'>Sign up</font></u></string>
+    <string name="tangedco_login_forgot_password">Forgot Password?</string>
+
+    <string name="login_bottom">LOG IN WITH YOUR CREDENTIALS</string>
+
+    <string name="alert_please_enter_valid_username">Please enter the username.</string>
+    <string name="alert_please_enter_valid_otp">Please enter valid Otp</string>
+    <string name="alert_please_enter_password">Please enter the password.</string>
+
+    <string name="button_set_pin">Set PIN</string>
+
+    <!-- PIN Screen-->
+    <string name="app_lock_set_new_pin_message">Set a 4-digit PIN to protect your app</string>
+    <string name="app_lock_confirm_pin_message">Please enter your 4-digit app lock PIN</string>
+    <string name="app_lock_enter_pin_text">Please enter 4-digit PIN</string>
+    <string name="app_lock_confirm_pin_text">Please confirm your 4-digit PIN</string>
+    <string name="app_lock_confirm_pin_not_matches">Please confirm the PIN you entered</string>
+    <string name="app_lock_pin_length_fails">Your PIN should be 4-digit</string>
+    <string name="app_lock_successfully_changed">Your app lock has been changed</string>
+    <string name="app_lock_successfully_set">Your app lock has been set</string>
+    <string name="app_lock_enter_new_pin_message">Enter a new 4-digit PIN</string>
+    <string name="app_lock_incorrect_pin_title">Incorrect PIN</string>
+    <string name="app_lock_incorrect_pin_attempt_first">You have 2 attempts remaining before you are logged out and your preferences removed.</string>
+    <string name="app_lock_incorrect_pin_attempt_second">You have 1 attempt remaining before you are logged out and your preferences removed.</string>
+    <string name="app_lock_re_login_message">You are logged out. Please re-login again</string>
+    <string name="app_lock_confirm_button_text">Confirm</string>
+    <string name="app_lock_cancel_button_text">Cancel</string>
+
+</resources>

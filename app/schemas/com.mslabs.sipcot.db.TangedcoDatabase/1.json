@@ -1,0 +1,118 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "92ff8eee2dfb9c98506c15eeef13b070",
+    "entities": [
+      {
+        "tableName": "user",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `circleId` INTEGER NOT NULL, `Iserror` INTEGER NOT NULL, `sectionId` INTEGER NOT NULL, `sectionName` TEXT NOT NULL, `regionId` INTEGER NOT NULL, `divisionId` INTEGER NOT NULL, `subDivisionId` INTEGER NOT NULL, `subDivisionName` TEXT NOT NULL, `roleId` INTEGER NOT NULL, `divisionName` TEXT NOT NULL, `regionName` TEXT NOT NULL, `circleName` TEXT NOT NULL, `officeId` INTEGER NOT NULL, `officerId` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "circleId",
+            "columnName": "circleId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Iserror",
+            "columnName": "Iserror",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sectionId",
+            "columnName": "sectionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sectionName",
+            "columnName": "sectionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionId",
+            "columnName": "regionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "divisionId",
+            "columnName": "divisionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subDivisionId",
+            "columnName": "subDivisionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subDivisionName",
+            "columnName": "subDivisionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roleId",
+            "columnName": "roleId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "divisionName",
+            "columnName": "divisionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionName",
+            "columnName": "regionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "circleName",
+            "columnName": "circleName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "officeId",
+            "columnName": "officeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "officerId",
+            "columnName": "officerId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '92ff8eee2dfb9c98506c15eeef13b070')"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mslabs.tangetco.api.response.LoginResponse" />
+    </data>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_10_dp">
+
+        <TextView
+            android:id="@+id/circleTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Circle"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/circleTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_background"
+            android:text="@{viewModel.circleName.trim()}"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@string/app_name"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/circleTIL" />
+        <TextView
+            android:id="@+id/divisionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Division"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circleTXT" />
+
+        <TextView
+            android:id="@+id/divisionTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_background"
+            android:text="@{viewModel.divisionName.trim()}"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@string/app_name"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/divisionTIL" />
+        <TextView
+            android:id="@+id/subdivisionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SubDivision"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divisionTXT" />
+
+        <TextView
+            android:id="@+id/subdivisionTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_background"
+            android:text="@{viewModel.subDivisionName.trim()}"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@string/app_name"
+            app:layout_constraintTop_toBottomOf="@id/subdivisionTIL" />
+    <TextView
+            android:id="@+id/sectionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Section"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subdivisionTXT" />
+
+        <TextView
+            android:id="@+id/sectionTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_background"
+            android:text="@{viewModel.sectionName.trim()}"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/spacing_10_dp"
+            android:padding="@dimen/spacing_10_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@string/app_name"
+            app:layout_constraintTop_toBottomOf="@id/sectionTIL" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/white_transparent" />
+            <stroke
+                android:width="@dimen/divider_height"
+                android:color="@color/light_gray" />
+            <padding
+                android:left="@dimen/activity_horizontal_margin"
+                android:right="@dimen/activity_horizontal_margin" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="right|center"
+            android:src="@drawable/ic_spinner_arrow"
+            android:tint="@color/dark_gray" />
+    </item>
+</layer-list>

@@ -1,0 +1,97 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    style="@style/CoordinatorLayout"
+    android:background="@drawable/complaint_list_background"
+    android:fitsSystemWindows="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width = "match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height = "wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id = "@+id/toolbar"
+            android:background = "@color/colorPrimary"
+            android:layout_width = "match_parent"
+            android:layout_height = "?attr/actionBarSize"
+            app:theme = "@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme = "@style/ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <Button
+        android:id="@+id/track_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/action_button_bg"
+        android:text="Complaint History"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+         <ImageView
+             android:layout_width="match_parent"
+             android:src="@drawable/temp_image_complaint"
+             android:scaleType="fitXY"
+             android:layout_height="wrap_content"/>
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider_layout"
+                style="@style/MatchParentLayout"
+                custom:auto_cycle="true"
+                android:visibility="gone"
+                custom:indicator_visibility="visible"
+                custom:pager_animation="Accordion"
+                custom:pager_animation_span="1100" />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/pager_indicator"
+                style="@style/AndroidImageSlider_Corner_Oval_Orange"
+                android:layout_alignBottom="@id/slider_layout"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_margin="@dimen/margin_internal"
+                custom:selected_color="@color/dark_gray"
+                custom:unselected_color="@color/light_gray" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/topLayout"
+            android:background="@color/submitted" />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/SectionLayout"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+       android:layout_below="@id/viewLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/profile_details_layout"
+            style="@style/SectionLayout"
+            android:orientation="vertical"
+            />
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,209 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionMenuTextColor">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="LoginTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_size_16_sp</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColorHint">@color/circle_greay</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:padding">@dimen/spacing_20_dp</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_20_dp</item>
+        <item name="android:layout_marginRight">@dimen/spacing_20_dp</item>
+        <item name="android:layout_marginTop">@dimen/spacing_10_dp</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_10_dp</item>
+        <item name="android:textCursorDrawable">@drawable/search_cursor</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <style name="WrapContentLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Label" parent="WrapContentLayout">
+        <item name="android:textSize">@dimen/text_size_secondary</item>
+        <item name="android:textColor">@color/text_medium</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">@dimen/padding_internal</item>
+        <item name="android:paddingRight">@dimen/padding_internal</item>
+        <item name="android:paddingTop">@dimen/padding_internal</item>
+        <item name="android:paddingBottom">@dimen/padding_internal</item>
+    </style>
+
+    <style name="Label.SubLine">
+        <item name="android:paddingTop">@dimen/zero_dp</item>
+        <item name="android:paddingBottom">@dimen/zero_dp</item>
+    </style>
+
+    <style name="Label.Primary">
+        <item name="android:textSize">@dimen/text_size_primary</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="Label.Primary.FirstLine">
+        <item name="android:paddingBottom">@dimen/zero_dp</item>
+    </style>
+
+    <style name="Label.Tertiary">
+        <item name="android:textSize">@dimen/text_size_tertiary</item>
+    </style>
+
+    <style name="Label.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Label.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Label.Title.Large">
+        <item name="android:textSize">@dimen/text_size_title_large</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Label.SubTitle">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+    </style>
+
+    <style name="LinkText" parent="Label">
+        <item name="android:clickable">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+
+    <style name="MatchParentLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="SectionContainer" parent="SectionLayout">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="SectionLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CoordinatorLayout" parent="MatchParentLayout">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="ToolBar" parent="MatchParentLayout">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="PinPadViewStyle" parent="SectionLayout">
+        <item name="android:padding">@dimen/password_pin_numpad_padding</item>
+    </style>
+
+    <style name="PinElementStyle" parent="WrapContentLayout"></style>
+
+    <style name="PinEnteredStyle" parent="PinElementStyle">
+        <item name="android:src">@drawable/pin_element_blank</item>
+        <item name="android:layout_marginRight">@dimen/password_pin_element_space</item>
+    </style>
+
+    <style name="PinEntryStyle">
+        <item name="android:layout_width">@dimen/pin_numpad_bg_width</item>
+        <item name="android:minWidth">@dimen/pin_numpad_bg_width</item>
+        <item name="android:maxWidth">@dimen/pin_numpad_bg_width</item>
+        <item name="android:layout_height">@dimen/pin_numpad_bg_height</item>
+        <item name="android:minHeight">@dimen/pin_numpad_bg_height</item>
+        <item name="android:maxHeight">@dimen/pin_numpad_bg_height</item>
+        <item name="android:background">@drawable/pin_numpad_bg</item>
+        <item name="android:textSize">@dimen/password_pin_numpad_digit_size</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
+    </style>
+
+    <style name="PinEntryActionStyle" parent="PinEntryStyle">
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
+        <item name="android:textSize">@dimen/password_pin_numpad_text_size</item>
+    </style>
+
+    <style name="PinTitleStyle" parent="SectionLayout">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:text">@string/app_lock_confirm_pin_message</item>
+        <item name="android:textSize">@dimen/text_size_secondary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="PinEnteredSectionStyle" parent="WrapContentLayout">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/password_pin_margin_bottom</item>
+        <item name="android:layout_alignParentBottom">false</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorPrimaryDark</item>
+        <item name="colorSurface">@color/window_bg_color</item>
+        <item name="colorOnSurface">@color/stock_color</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog.Dark" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorPrimaryDark</item>
+        <item name="colorSurface">@color/window_bg_color</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+    </style>
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dialog_corner_radius</item>
+    </style>
+    <style name="MOutlineTextInputLayout.Exposed" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="colorPrimary">@color/stock_color</item>
+    </style>
+
+
+</resources>

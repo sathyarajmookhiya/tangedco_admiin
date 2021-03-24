@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    style="@style/SectionLayout">
+
+        <ImageView
+            android:id="@+id/userLogo"
+            android:layout_width="match_parent"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_height="wrap_content"/>
+
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            style="@style/SectionLayout"
+            android:layout_below="@id/userLogo"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/pin_title"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                style="@style/PinTitleStyle" />
+
+            <LinearLayout
+                android:id="@+id/pin_element_layout"
+                style="@style/PinEnteredSectionStyle"
+                android:layout_below="@id/pin_title">
+
+                <!-- PIN dots -->
+                <ImageView
+                    android:id="@+id/pin_element_1"
+                    style="@style/PinEnteredStyle"
+                    tools:src="@drawable/pin_element_blank" />
+
+                <ImageView
+                    android:id="@+id/pin_element_2"
+                    style="@style/PinEnteredStyle"
+                    tools:src="@drawable/pin_element_blank" />
+
+                <ImageView
+                    android:id="@+id/pin_element_3"
+                    style="@style/PinEnteredStyle"
+                    tools:src="@drawable/pin_element_blank" />
+
+                <ImageView
+                    android:id="@+id/pin_element_4"
+                    style="@style/PinEnteredStyle"
+                    android:layout_marginRight="0dp"
+                    tools:src="@drawable/pin_element_blank" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.mslabs.tangetco.common.PinPadView
+            android:id="@+id/numpad_layout"
+            android:layout_width="match_parent"
+            style="@style/SectionLayout"
+            android:layout_below="@+id/top_layout"
+            android:gravity="center_horizontal" />
+
+
+    </RelativeLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="window_bg_color">#F6F8FA</color>
+    <color name="stock_color">#3E0C72D6</color>
+
+    <color name="light_gray">#AAAAAA</color>
+    <color name="white_transparent">#BFFFFFFF</color>
+    <color name="black_transparent">#BB000000</color>
+    <color name="white">@android:color/white</color>
+
+    <color name="divider">#BDBDBD</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="button_text">@color/white</color>
+    <color name="black">@android:color/black</color>
+
+    <color name="text_color">#344c74</color>
+
+    <color name="yellow">#e6c300</color>
+
+    <color name="window_bg_gray">#E7E9EE</color>
+    <color name="primary_button_bg">@color/yellow</color>
+    <color name="primary_button_bg_selected">#7e6b02</color>
+    <color name="primary_button_border">@color/yellow</color>
+
+    <color name="secondary_button_border">@color/yellow</color>
+    <color name="secondary_button_bg">@android:color/transparent</color>
+
+    <color name="action_button_bg">#E39600</color>
+    <color name="action_button_bg_selected">#CA8500</color>
+    <color name="action_button_border">#E39600</color>
+
+
+
+    <color name="login_button_bg_gradient_start">#E57373</color>
+    <color name="login_button_bg_gradient_center">#F44336</color>
+    <color name="login_button_bg_gradient_end">#D32F2F</color>
+    <color name="login_button_bg_selected">#B71C1C</color>
+
+    <color name="bill_red">#D1000E</color>
+
+    <color name="secondary_button_bg_selected">@color/yellow</color>
+    <color name="text_dark">@color/primary_text</color>
+    <color name="text_light">#676767</color>
+    <color name="text_medium">@color/secondary_text</color>
+
+
+    <color name="brown">#795548</color>
+    <color name="purble">#9c27b0</color>
+    <color name="teal">#009688</color>
+    <color name="green_color">#026928</color>
+
+    <color name="dark_gray">#515151</color>
+    <color name="submitted">#32bcf5</color>
+    <color name="processing">#bb9e17</color>
+    <color name="transfer">#6d4c41</color>
+    <color name="completed">#2bbb17</color>
+    <color name="reopen">#f4511e</color>
+    <color name="fault_not_found">#000000</color>
+
+    <color name="circle_red">#E23234</color>
+    <color name="circle_green">#61BB50</color>
+    <color name="circle_blue">#644F9D</color>
+    <color name="circle_greay">#a9a8a8</color>
+
+    <color name="light_black">#504f4f</color>
+    <color name="blue">#0737d4</color>
+    <color name="green">#425017</color>
+
+    <color name="submit_color">#FC8423</color>
+    <color name="processing_color">#ED5152</color>
+    <color name="transfer_color">#7265B7</color>
+    <color name="complited_color">#9FC83B</color>
+
+    <color name="pin_numpad_pressed">#062A75</color>
+    <color name="pin_numpad_normal">#E5E7F2</color>
+
+    <color name="pin_element_normal">#E5E7F2</color>
+    <color name="pin_element_pressed">#062A75</color>
+
+</resources>

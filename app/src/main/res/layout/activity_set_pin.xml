@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pinpad.SetPinActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/MatchParentLayout">
+
+        <LinearLayout style="@style/SectionContainer">
+
+            <LinearLayout
+                style="@style/SectionContainer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/spacing_40_dp"
+                android:layout_marginRight="@dimen/spacing_40_dp"
+                android:layout_marginTop="@dimen/spacing_40_dp">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:src="@drawable/logo"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_40_dp"
+                    android:text="@string/app_lock_set_new_pin_message"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_enter_pin"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:maxLength="4"
+                    android:inputType="numberPassword"
+                    android:hint="@string/app_lock_enter_pin_text"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/circle_greay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_confirm_pin"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:hint="@string/app_lock_enter_pin_text"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/circle_greay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/button_set_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_login_background"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/button_set_pin" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PinPadView">
+        <attr name="leftActionText" format="string|reference" />
+        <attr name="rightActionText" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AcknowledgeItemView">
+        <attr name="primaryText" format="string|reference" />
+        <attr name="secondaryText" format="string|reference" />
+        <attr name="android:icon" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableItemView">
+        <attr name="title" />
+        <attr name="content" />
+    </declare-styleable>
+
+    <declare-styleable name="MyCustomStyle">
+        <attr name="acknowledgeItemViewStyle" format="reference" />
+        <attr name="pinPadViewStyle" format="reference" />
+        <attr name="expandableItemViewStyle" format="reference" />
+    </declare-styleable>
+
+</resources>
