@@ -2,6 +2,7 @@ package com.mslabs.tangetco.api.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.mslabs.sipcot.api.repository.ApiRepository
 import com.mslabs.tangetco.api.APIClient
 import com.mslabs.tangetco.api.APIInterface
@@ -23,11 +24,16 @@ class TakeActionRepositary : ApiRepository() {
             val apiInterface = APIClient.client.create(
                 APIInterface::class.java
             )
+            val gson = GsonBuilder().create()
+            val json = gson.toJson(takeActionRequestApi) // obj is your object
+            Log.d("takeActionRequestApi $json")
             val call = apiInterface.takeAction("application/json", "application/json", takeActionRequestApi)
             call.enqueue(getResponseTakeActionCallback(object : ResponseTakeActionCallback {
                 override fun responseTakeAction(responseData: BaseResponse?) {
                     if (responseData!!.Iserror != 1) {
-                        Log.d("Data Json : $responseData")
+                        val gson = GsonBuilder().create()
+                        val json = gson.toJson(responseData) // obj is your object
+                        Log.d("Data Json : $json")
                         val complaintListResponse =
                             Gson().fromJson(Gson().toJson(responseData), ComplaintListResponse::class.java)
                         TangedcoPreferenceManager.saveComplaintList(complaintListResponse)

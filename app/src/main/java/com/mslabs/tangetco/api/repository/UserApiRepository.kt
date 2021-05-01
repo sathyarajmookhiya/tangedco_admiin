@@ -2,15 +2,15 @@ package com.mslabs.sipcot.api.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
-
+import com.google.gson.GsonBuilder
 import com.mslabs.tangetco.api.APIClient
 import com.mslabs.tangetco.api.APIInterface
 import com.mslabs.tangetco.api.request.LoginApi
 import com.mslabs.tangetco.api.response.LoginResponse
 import com.mslabs.tangetco.util.Log
-import com.mslabs.tangetco.util.preference.TangedcoPreferenceManager
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
 
 /**
  * Project           : Smarthome
@@ -31,6 +31,13 @@ class UserApiRepository : ApiRepository() {
             val apiInterface = APIClient.client.create(
                 APIInterface::class.java
             )
+
+
+            val gson = GsonBuilder().create()
+            val json = gson.toJson(loginApi) // obj is your object
+            Log.d("Login Api $json")
+
+
             val call = apiInterface.login("application/json","application/json",loginApi)
             call.enqueue(getLoginResponseCallback(object : ResponseCallback {
                 override fun responseData(responseData: LoginResponse?) {

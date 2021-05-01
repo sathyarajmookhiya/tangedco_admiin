@@ -2,6 +2,7 @@ package com.mslabs.tangetco.api.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.mslabs.sipcot.api.repository.ApiRepository
 import com.mslabs.tangetco.api.APIClient
 import com.mslabs.tangetco.api.APIInterface
@@ -22,6 +23,9 @@ class TransferActionRepository : ApiRepository() {
             val apiInterface = APIClient.client.create(
                 APIInterface::class.java
             )
+            val gson = GsonBuilder().create()
+            val json = gson.toJson(takeActionRequestApi) // obj is your object
+            Log.d("TransferActionRepository $json")
             val call = apiInterface.transferAction("application/json", "application/json", takeActionRequestApi)
             call.enqueue(getResponseTakeActionCallback(object : ResponseTakeActionCallback {
                 override fun responseTakeAction(responseData: BaseResponse?) {

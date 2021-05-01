@@ -18,7 +18,7 @@ import java.util.*
 import javax.net.ssl.HostnameVerifier
 
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : APIClient
  * Description       :
  * Revision History  : version 1
@@ -28,7 +28,7 @@ import javax.net.ssl.HostnameVerifier
  */
 object APIClient {
     private const val BASE_URL =
-        "http://103.234.149.239:8080/admin/rest/"
+        "http://103.234.149.239:8080/tangedco-admin/rest/"
   /* private const val BASE_URL =
         "https://sipcot.tn.gov.in/portal/solid_waste_mgmt/resources/"*/
     //10 MB

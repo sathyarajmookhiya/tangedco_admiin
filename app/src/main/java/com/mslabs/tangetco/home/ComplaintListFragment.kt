@@ -120,7 +120,8 @@ class ComplaintListFragment : BaseFragment(),ComplaintListAdapter.ComplaintListC
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        complaintList("SECTION_ID", TangedcoPreferenceManager.getProfile()!!.officeId, status_code,  complaint_code)
+        //TangedcoPreferenceManager.getProfile()!!.officeId
+        complaintList("sectionId", TangedcoPreferenceManager.getProfile()!!.officeId, status_code,  complaint_code)
 
     }
 

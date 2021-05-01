@@ -1,15 +1,9 @@
 package com.mslabs.tangetco.login
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.View
-import android.view.Window
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.databinding.DataBindingUtil
@@ -34,7 +28,6 @@ class LoginActivity : BaseActivity() {
     }
 
 
-
     lateinit var dataBinding: ActivityLoginBinding
 
     val loginViewModel: LoginViewModel by lazy {
@@ -52,17 +45,20 @@ class LoginActivity : BaseActivity() {
         ) as InputMethodManager
 
 
-        if(BuildConfig.DEBUG) {
-        /*   loginViewModel.loginUserName.value = "cbn120ae"
-           loginViewModel.loginPassword.value = "cbn120ae"
+        if (BuildConfig.DEBUG) {
+            /*   loginViewModel.loginUserName.value = "cbn120ae"
+               loginViewModel.loginPassword.value = "cbn120ae"
+    */
+             /* loginViewModel.loginUserName.value = "chc221ae"
+             loginViewModel.loginPassword.value = "chc221ae"
 */
-            loginViewModel.loginUserName.value = "chc221ae"
-           loginViewModel.loginPassword.value = "chc221ae"
+           /* loginViewModel.loginUserName.value = "sekk"
+            loginViewModel.loginPassword.value = "sekk"*/
 
-           /*   loginViewModel.loginUserName.value = "ers405ae"
-           loginViewModel.loginPassword.value = "ers405ae"*/
+            /*   loginViewModel.loginUserName.value = "ers405ae"
+            loginViewModel.loginPassword.value = "ers405ae"*/
 
-       }
+        }
 
         dataBinding.buttonLogin.setOnClickListener {
             handleUserLogin()
@@ -70,22 +66,22 @@ class LoginActivity : BaseActivity() {
     }
 
 
-
     private fun handleUserLogin() {
         if (validateData()) {
             showLoader()
-            val mutableLiveData = loginViewModel.loginUser( loginViewModel.loginUserName.value, loginViewModel.loginPassword.value)
+            val mutableLiveData = loginViewModel.loginUser(
+                loginViewModel.loginUserName.value,
+                loginViewModel.loginPassword.value
+            )
             mutableLiveData.observe(this, Observer<LoginResponse> { responseData ->
                 dismissLoadingDialog()
-                if(responseData.iserror==null)
-                {
+                if (responseData.iserror == null) {
                     showSnackbar(
                         window.decorView,
                         responseData.message,
                         Snackbar.LENGTH_LONG
                     )
-                }
-                else {
+                } else {
                     if (responseData.iserror != 1) {
 
                         Log.d("Success Login !!!")
@@ -117,9 +113,7 @@ class LoginActivity : BaseActivity() {
             userNameField.error =
                 getErrorMessage(resources.getString(R.string.alert_please_enter_valid_username))
             return false
-        }
-        else
-        {
+        } else {
             userNameField.error = null
 
         }
@@ -130,7 +124,7 @@ class LoginActivity : BaseActivity() {
             passwordField.error =
                 getErrorMessage(resources.getString(R.string.alert_please_enter_password))
             return false
-        }   else {
+        } else {
             passwordField.error = null
         }
         return isValid

@@ -3,7 +3,7 @@ package com.mslabs.tangetco;
 import android.content.Context;
 
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : StethoHelper
  * Description       :
  * Revision History  : version 1

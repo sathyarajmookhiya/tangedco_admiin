@@ -4,7 +4,7 @@ import com.mslabs.sipcot.db.TangedcoDatabase.Companion.instance
 import com.mslabs.tangetco.api.response.LoginResponse
 
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : DatabaseManager
  * Description       :
  * Revision History  : version 1

@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : FileUtil
  * Description       :
  * Revision History  : version 1

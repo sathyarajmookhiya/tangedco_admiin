@@ -13,7 +13,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : NetworkUtil
  * Description       :
  * Revision History  : version 1

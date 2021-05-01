@@ -1,7 +1,7 @@
 package com.mslabs.tangetco.api;
 
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : APIConstant
  * Description       :
  * Revision History  : version 1

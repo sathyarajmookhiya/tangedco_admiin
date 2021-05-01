@@ -18,7 +18,6 @@ import com.mslabs.tangetco.api.response.DashboardList
 import com.mslabs.tangetco.api.response.DashboardResponse
 import com.mslabs.tangetco.common.BaseFragment
 import com.mslabs.tangetco.databinding.FragmentHomeBinding
-import com.mslabs.tangetco.home.SectionForm.HeaderAdapter
 import com.mslabs.tangetco.home.adapter.QuickActionAdapter
 import com.mslabs.tangetco.login.LoginViewModel
 import com.mslabs.tangetco.util.Log
@@ -26,7 +25,7 @@ import com.mslabs.tangetco.util.preference.TangedcoPreferenceManager
 import kotlinx.android.synthetic.main.content_main_fragment.*
 
 
-class HomeFragment : BaseFragment(),QuickActionAdapter.QuickActionClickListener {
+class HomeFragment : BaseFragment(), QuickActionAdapter.QuickActionClickListener {
 
     lateinit var loginViewModel: LoginViewModel
 
@@ -59,23 +58,27 @@ class HomeFragment : BaseFragment(),QuickActionAdapter.QuickActionClickListener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dashboardList("SECTION_ID", TangedcoPreferenceManager.getProfile()!!.officeId)
+        dashboardList("sectionId", TangedcoPreferenceManager.getProfile()!!.officeId)
+        // dashboardList("SECTION_ID", 2428)
 
     }
 
     override fun onResume() {
         super.onResume()
-        dashboardList("SECTION_ID", TangedcoPreferenceManager.getProfile()!!.officeId)
+        dashboardList("sectionId", TangedcoPreferenceManager.getProfile()!!.officeId)
+        //dashboardList("SECTION_ID", 2428)
 
     }
 
-    fun homeDashboardList(dashboardResponse: DashboardResponse) {
+    fun homeDashboardList(dashboardList: MutableList<DashboardList>) {
 
-        val adapter = QuickActionAdapter(requireContext()!!,
-            dashboardResponse.dashboardList as MutableList<DashboardList>, this)
+        val adapter = QuickActionAdapter(
+            requireContext(),
+            dashboardList, this
+        )
         recyclerView.adapter = adapter
 
-       // Log.d("Name Of Response : $dashboardResponse")
+        // Log.d("Name Of Response : $dashboardResponse")
 
     }
 
@@ -88,7 +91,11 @@ class HomeFragment : BaseFragment(),QuickActionAdapter.QuickActionClickListener 
                 if (responseData != null) {
                     Log.d("Success Dashboard !!!")
                     val dashboardResponse = TangedcoPreferenceManager.getDashboardList()
-                    homeDashboardList(TangedcoPreferenceManager.getDashboardList()!!)
+                    if (responseData.dashboardList.isNullOrEmpty()) {
+                        Log.d("Empty")
+                    } else {
+                        homeDashboardList(responseData.dashboardList as MutableList<DashboardList>)
+                    }
                     errorLayout.visibility = View.GONE
                     recyclerView.visibility = View.VISIBLE
                 } else {
@@ -109,11 +116,17 @@ class HomeFragment : BaseFragment(),QuickActionAdapter.QuickActionClickListener 
     }
 
 
+    override fun onQuickActionClicked(quickAction: DashboardList, position: Int, status: Int) {
 
-    override fun onQuickActionClicked(quickAction: DashboardList,position: Int,status:Int) {
-
-        startActivity(ComplaintListActivity.newInstance(requireContext(),position,status,quickAction.Complaintname))
-        Log.d("Click Status : "+position +" :  "+status)
+        startActivity(
+            ComplaintListActivity.newInstance(
+                requireContext(),
+                position,
+                status,
+                quickAction.Complaintname
+            )
+        )
+        Log.d("Click Status : " + position + " :  " + status)
     }
 
 }

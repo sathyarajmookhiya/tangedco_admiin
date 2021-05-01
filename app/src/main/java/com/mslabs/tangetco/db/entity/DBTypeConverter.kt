@@ -9,7 +9,7 @@ import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 /**
- * Project           : smartplug
+ * Project           : TangedcoComplaint
  * File Name         : DBTypeConverter
  * Description       :
  * Revision History  : version 1

@@ -1,6 +1,7 @@
 package com.mslabs.tangetco.api.repository
 
 import androidx.lifecycle.MutableLiveData
+import com.google.gson.GsonBuilder
 import com.mslabs.sipcot.api.repository.ApiRepository
 import com.mslabs.tangetco.api.APIClient
 import com.mslabs.tangetco.api.APIInterface
@@ -19,11 +20,16 @@ class MasterListRepository : ApiRepository() {
             val apiInterface = APIClient.client.create(
                 APIInterface::class.java
             )
+
             val call = apiInterface.getRegion()
             call.enqueue(getResponseRegionCallback(object : ResponseRegionCallback {
                 override fun responseRegionList(responseData: RegionList?) {
                     if (responseData!!.iserror != 1) {
-                        Log.d("Data Json : $responseData")
+
+                        val gson = GsonBuilder().create()
+                        val json = gson.toJson(responseData) // obj is your object
+                        Log.d("Data Json : $json")
+
                         /*   val complaintListResponse =
                                Gson().fromJson(Gson().toJson(responseData), ComplaintListResponse::class.java)
                            TangedcoPreferenceManager.saveComplaintList(complaintListResponse)*/
@@ -45,8 +51,9 @@ class MasterListRepository : ApiRepository() {
             call.enqueue(getResponseCircleCallback(object : ResponseCircleCallback {
                 override fun responseCircleList(responseData: CircleList?) {
                     if (responseData!!.iserror != 1) {
-                        Log.d("Data Json : $responseData")
-                        /*   val complaintListResponse =
+                        val gson = GsonBuilder().create()
+                        val json = gson.toJson(responseData) // obj is your object
+                        Log.d("Data Json : $json")                        /*   val complaintListResponse =
                                Gson().fromJson(Gson().toJson(responseData), ComplaintListResponse::class.java)
                            TangedcoPreferenceManager.saveComplaintList(complaintListResponse)*/
                     }
